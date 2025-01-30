@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport " content="width=device-width, initial-scale=1">
+    <title>The Typing Point | Home</title>
+    <!-- Online CDN CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--Online Font awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Custom css -->
+		<link rel="stylesheet" href="./css/master.css">
+
+    <!-- font styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Fondamento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Fondamento&family=Roboto:wght@100&display=swap" rel="stylesheet">
+   <style>
+     
+      
+
+ 
+
+.header {
+  display: flex;
+  align-items: center;
+}
+.meter-design {
+  height: 40px;
+  width: 85px;
+  margin: 3px;
+  padding: 0px;
+  border-radius: 2%;
+  text-align: center;
+  border: 1px solid transparent;
+
+}
+ 
+.errors{
+  background-color: rgba(233, 15, 15, 0.808);
+  color: white;
+  /* text-align: center; */
+}
+.timer {
+  background-color: rgb(53, 185, 110);
+  color: white;
+  /* text-align: center; */
+}
+.accuracy {
+  background-color: #e57700;
+  color: white;
+  /* text-align: center; */
+
+}
+
+.wpm{
+  background-color: rgb(17, 187, 159);
+  color: white;
+}
+.cpm, .wpm  {
+  display: none;
+}
+
+.head {
+  height: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;;
+  font-weight: bolder;
+  padding: 5px;
+
+  margin-bottom: .5rem;
+}
+
+.init_time, .init_errors,
+.init_accuracy, .init_cpm,
+.init_wpm {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.content {
+  display: none;
+  height: 200px;
+  background-color: white;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  /* margin: 10px; */
+  margin: 10px 10px 10px 0;
+  padding: 25px;
+  box-shadow: grey 1px 0px 2px;
+  border-radius: 5px;
+  letter-spacing: .1rem;
+  word-spacing: 1.1rem;
+  overflow: scroll;
+}
+
+.input_box {
+  /* background-color: white; */
+  font-weight: bolder;
+  height: 130px;
+  width: 450px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0px 10px 0;
+  padding: 15px;
+  /* z-index: 0; */
+  /* top: -5rem; */
+   
+}
+
+
+.correct{
+  color: rgb(82, 200, 82);
+  background-color: gainsboro;
+}
+
+ .restart { 
+  display: none;
+  
+  font-size: 2rem;
+  padding: 10px;
+  border: 0px;
+}
+
+.start {
+
+  display: none;
+  font-size: 2rem;
+  padding: 10px;
+  border: 0px;
+   
+  
+} 
+   </style>
+</head>
+ <body>
+        <!-- Navigation bar -->
+         <nav class="navbar navbar-default  ">
+           <div class="container">
+
+             <div class="navbar-header">
+
+                <!-- navbar brand -->
+                <a href="index.html" class="navbar-brand"> 
+                  <img class="img-responsive" src="img/logo61.png" alt="logo"> 
+                </a>
+
+                <!-- Collapsible/Hamburger button -->
+                <button type="button"class="navbar-toggle collapsed" data-target="#navbar-menu" data-toggle="collapse" >
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <!-- Collapsible/Hamburger button -->
+              </div>
+
+                <!-- navbar-menu -->
+                <div class="navbar-collapse collapse pull-right" id="navbar-menu">
+                
+                  <!-- menu items -->
+                  <ul class="nav navbar-nav">
+                    <li class="active">
+
+                      <a href="index.html">
+                          <span class="glyphicon glyphicon-dashboard"></span>
+                        Typing Test
+                      </a>
+                    </li>
+                    <!-- <li>
+                      <a href="#">
+                          <span class="glyphicon glyphicon-pencil"></span>
+
+                        Typing Practice
+                      </a>
+                    </li> -->
+                    <li class="dropdown">
+                      <a href="game.html" class="dropdown-toggle" data-toggle="dropdown" >
+                        <span class="glyphicon glyphicon-king"></span>
+                        Typing Game
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="typing-keystroke.html">Typing Keystroke</a></li>
+                        <li><a href="fast-fire-typer.html">Fast Fire Typer</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <span class="glyphicon glyphicon-briefcase"></span>
+                        Typing Course
+                        <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu ">
+                        <li  > <a href="#">Official course</a> </li>
+                        <li class="divider"> </li>
+                        <li  > <a href="#">English course</a> </li>
+                        <li  > <a href="#">Hindi course</a> </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="contact-us.html">
+                          <span class="glyphicon glyphicon-phone-alt"></span>
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+                <!-- navbar-menu -->
+              </div>
+              <!-- end of container -->
+
+         </nav>
+       <!-- Navigation bar -->
+        
+
+          <!-- panel -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+  
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <div class="ani-girl">
+                      <img src="img/anigirl.png" alt="anigirl" class="img-responsive">
+                    </div>
+                     <h1>Typing Speed Test</h1>
+                     <hr>
+                    <!-- ============================================ -->
+                    <div class="border">
+                      <div class="header">
+                  
+                        <div class="wpm meter-design">
+                          <div class="head">Words / min</div>
+                          <div class="init_wpm">100</div>
+                        </div>
+                        
+                        <div class="errors meter-design">
+                          <div class="head">Errors</div>
+                          <div class="init_errors">0</div>
+                        </div>
+                        
+                        <div class="timer meter-design">
+                          <div class="head">Time(s)</div>
+                          <div class="init_time">60s</div>
+                        </div>
+                        
+                        <div class="accuracy meter-design">
+                          <div class="head">Accuracy(%)</div>
+                          <div class="init_accuracy">100</div>
+                        </div>
+                      </div>
+                      </div>
+                  
+                      <div class="content" ></div>
+                       <textarea class="input_box form-control" placeholder=" Focus your cursor here to strat typing......" oninput="textInput()"
+                        onfocus="startGame()"></textarea>
+                        
+                        <br>
+                        <button class="start btn btn-success btn-block" onclick="startGame()">Start</button><br>
+                        <button class="restart btn btn-success btn-block" style="display: none;" onclick="resetValues()">Restart</button>
+                    <!-- ============================================= -->
+                  </div>
+                   
+                </div> <!-- end of panel -->
+  
+              </div><!-- col-md-8 -->
+  
+  
+            </div>
+            <!-- end of row -->
+          </div>
+          <!-- end of container -->
+          <div class="container">
+         <span class="line"><hr ></span>   
+          </div>
+        <!-- panel -->
+
+
+          <!-- details -->
+          <div class="container">
+            <div class="row">
+                <div class="jumbotron fact"  >
+                  <h2>You should Know these facts about touch typing.</h2>
+                </div>
+
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">How to improve typing speed?</h3>
+                              <p class="card-text">
+                                Typing is all about muscle memory, so the only way to improve is to practice typing regularly. 
+                                We created TheTypingCat to give you a tool to learn and practice touch typing in the most effective way.
+                                The process of developing proper habits requires you to train your fingers periodically and to be patient. 
+                                You should first focus foremost on accuracy, ergonomics, and high typing speed will come with time. 
+                                Not to overwork yourself. Remember, it is a marathon, not a sprint, it is better to take ten minutes exercises 
+                                daily than a single one hour run.
+                              </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">Words Per Minute (WPM)</h3>
+                              <p class="card-text">
+                                The WPM stands for words per minute, and it is a measure of typing speed,
+                                commonly used in the recruitment process and typing speed tests.
+                                It is standardized to five characters or keystrokes. 
+                                The benefits of a standardized measurement of input speed are that it enables comparison across language. 
+                                Make sure you start your touch typing with high accuracy. Your speed will grow over time.
+                               </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">Character Per Minute (CPM)</h3>
+                              <p class="card-text">
+                                The CPM stands for characters per minute. So CPM is WPM divided by 5. 
+                                Sometimes people use a keystroke as an equivalent, but it is not the same thing. 
+                                Keystroke is the single hit on the keyboard. 
+                                So for the capital letter “A”, which is a single character, 
+                                we count two keystrokes. (SHIFT + a)
+                               </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+
+                  <!-- ================================================== -->
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">Should I practice regularly?</h3>
+                              <p class="card-text">
+                                Yes, for sure, there is nothing better than taking daily typing lessons.
+                                Repeating ten minutes typing practice will have a significant impact on your writing skills. 
+                                TheTypingCat is made to reinforce continuous learning of how to type.
+                                  We track your progress so you can see how your typing speed and accuracy increase over time.
+                                Regular activities are a critical factor in achieving professional typing skills.
+                              </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">Why typing speed matter?</h3>
+                              <p class="card-text">
+                                Touch typing lets you focus on your main activity.
+                                Being less distracted by how fast you can type gives you enormous productivity boosts.
+                                It allows you to make your work done better and higher quality.
+                                You will make much fewer type errors, and your work will be much more valuable.
+                                You would be able to communicate faster and better.
+                               </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+
+                  <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                              <h3 class="card-title">What is the proper finger position while typing?</h3>
+                              <p class="card-text">
+                                You should always start typing by placing your fingers on the home row. 
+                                There are the small bumps on the F and J key, which indicate the initial position of your index fingers.
+                                It helps you find this starting position on the keyboard without looking at it.
+                                Once you start with this position, your fingers have the full range of motion and a proper distance to all keys.
+                                It is the most optimal hands placement during typing.
+                               </p>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end of col-md-4 -->
+                  <!-- ==================================================== -->
+
+
+            </div>
+            <!-- end of row -->
+
+         </div>
+         <!-- details -->
+
+         <div class="container">
+           <h1>Supported Browsers</h1>
+           
+              <div class="row browser">
+
+                    <div class="col-md-3">
+                      <img class="img-responsive" src="img/chrome1.png" alt="chrome" >
+                      <h3> Google Chrome</h3>
+                      <a href="https://www.google.com/chrome/" target="_blank" class="btn btn-success btn-block">Download Google Chrome</a>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img class="img-responsive" src="img/safari.png" alt="safari">
+                      <h3>Safari</h3>
+                      <a href="https://support.apple.com/downloads#safari" target="_blank" class="btn btn-success btn-block">Download Safari</a>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img class="img-responsive" src="img/firefox.png" alt="firefox">
+                      <h3>Firefox</h3>
+                      <a href="https://www.mozilla.org/en-GB/firefox/new/" target="_blank" class="btn btn-success btn-block">Download Firefox</a>
+                    </div>
+
+                    <div class="col-md-3">
+                      <img class="img-responsive" src="img/edge.png" alt="Edge">
+                      <h3>Microsoft Edge</h3>
+                      <a href="https://www.microsoft.com/en-us/edge" target="_blank" class="btn btn-success btn-block">Download Microsoft Edge</a>
+                    </div>
+
+              </div>
+           
+
+         </div>
+
+
+
+
+            
+
+         
+
+        <!-- footer -->
+        <footer>
+         <div class="container-fluid">
+           <div class="row">
+             <div class="col-md-4" >
+               <a class="logo" href="#"> <img src="img/logo6.png" alt="logo"> </a>
+             </div>
+             <div class="col-md-2">
+               <ul class="list-unstyled">
+                 <h3>Quick Links</h3>
+                 <li> <a href="#">Typing test </a> </li>
+                 <li> <a href="#">Typing practice </a> </li>
+                 <li> <a href="#">FAQ</a> </li>
+                 <li> <a href="#">Blogs </a> </li>
+               </ul>
+             </div>
+             <div class="col-md-4" class="list-unstyled">
+               <ul>
+                 <h3>Contact Us</h3>
+                  <address class="">
+                    <i class="glyphicon glyphicon-map-marker"></i>
+                    GIDA Gorakhpur,
+                      Uttar Pradesh India <br>
+                      Phone: (+91) 6391871353 <br>
+                      Email: thetypingpoint@gmail.com
+
+                  </address>
+               </ul>
+             </div>
+             <!-- <div class="col-md-2">
+               <ul>
+                 <li> <a href="#">Official Typing </a> </li>
+                 <li> <a href="#">Official Typing </a> </li>
+                 <li> <a href="#">Official Typing </a> </li>
+                 <li> <a href="#">Official Typing </a> </li>
+               </ul>
+             </div> -->
+             <div class="col-md-2" >
+               <ul class="list-unstyled ">
+                 <h3>Social links</h3>
+                 <li> <a href="#">Facebook </a> </li>
+                 <li> <a href="#">Instagram </a> </li>
+                 <li> <a href="#">Twitter </a> </li>
+                 <li> <a href="#">YouTube </a> </li>
+               </ul>
+             </div>
+
+           </div>
+           <!-- end of row -->
+           <hr>
+           <p> 2020 TheTypingPoint Copywrite : All right reserved</p>
+
+
+       </footer>
+
+
+
+
+
+
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- Custom javascript -->
+        <script src="js/index.js"></script>
+      </body>
+
+</html>

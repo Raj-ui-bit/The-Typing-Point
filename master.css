@@ -1,0 +1,241 @@
+/* ********************* MRITUNJAY KUMAR ************************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding:  0;
+  height: auto;
+   
+   
+}
+  
+.navbar-default {
+  /* background-color: rgb(190, 55, 42); */
+  background-color: #44f;
+  color: white;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+   
+
+}
+
+
+.navbar-brand img {
+  margin-top: -1.3rem;
+  /* height: 60px;
+  width: 90px;*/
+} 
+/* nav #navbar-menu ul li:active {
+  background-color: black;
+ 
+  
+} */
+/* nav #navbar-menu ul li a:hover {
+  background-color:white;
+  color: darkslategray;
+  transition:all 0.1s ease;
+} */
+.navbar .navbar-nav li a {
+  color:#edeeef;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.navbar .navbar-nav .active > a {
+  background-color: transparent;
+  border-bottom: 5px solid white;
+  color: white;
+  /* padding-bottom: 15px; */
+  /* padding-bottom: 0.75em; */
+
+}
+
+.navbar .navbar-nav .active > a:hover, .navbar .navbar-nav li a:hover {
+  background-color:transparent;
+	border-bottom: 5px solid #edeeef;
+	padding-bottom: 0.75em;
+  /* color: #edeeef; */
+  color: white;
+	transition:all 0.3s ease;
+
+}
+
+
+ /* .navbar .navbar-nav li a:hover {
+	background-color:transparent;
+	border-bottom: 5px solid #edeeef;
+	padding-bottom: 0.75em;
+	color: #edeeef;
+	transition:all 0.3s ease;
+	 
+} */
+
+ /* @media(max-width: 34em){
+	.navbar-default .navbar-nav > .active >a{
+		border: none;
+		border-left:5px solid white;
+		padding-left: 18px;
+  } */
+  /* ============================== */
+
+.dropdown-menu{
+   
+  background-color: #44f;
+
+}
+
+ /* ============================ main panel ================================ */
+ 
+.panel .ani-girl img {
+ float: right;
+ /* position: relative; */
+ 
+}
+.panel {
+  border-radius: 10%;
+  margin-top: 1.5rem;
+}
+
+.panel .panel-body {
+  height: 500px;
+  border: 8px solid #241210;
+  border-radius: 5%;
+  background-color: #eee;
+  box-shadow: 0 0 20px 0px black;
+   
+}
+.panel .game-body {
+  height: 500px;
+  border: 8px solid #241210;
+  border-radius: 5%;
+  background-color: #eee;
+  /* background-color: black; */
+}
+
+
+/* ============================ Card============================== */
+.fact {
+  background-color: #a9e4dc;
+  border-left: 20px solid rgb(22, 190, 22);
+  color: rgb(209, 35, 35);
+  
+}
+.card .card-body {
+  margin-bottom: 2rem;
+  height: 370px;
+  padding: 2.5rem;
+  padding-top: 0;
+  /* border: 1px solid gray; */
+  border-radius: .5rem;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  /* box-shadow: 0px 0px 2px 0px rgb(133, 125, 125) ; */
+  letter-spacing: 1px;
+  text-align: justify;
+  overflow: hidden;
+  
+
+}
+
+.card .card-body:hover {
+  box-shadow: 0px 0px 15px 0px rgb(86, 147, 216) ;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  
+  
+}
+ 
+.card .card-body .card-title {
+  color: rgb(22, 146, 22);
+}
+
+
+.browser {
+  text-align: center;
+  height: auto;
+}
+.browser img {
+  margin-left: 22%;
+}
+
+.browser .btn {
+  font-size: 1.5rem;
+  padding: 1rem;
+  background-color: whitesmoke;
+  color: green;
+  border-radius: 0;
+
+}
+
+.browser .btn:hover {
+  font-size: 1.7rem;
+  transition: all .6s ease-in-out;
+  background-color: green;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+
+   
+  
+
+/*================================ Footer section ====================================*/
+footer {
+  margin-top: 100px;
+
+  height: auto;
+  /* background-color: #123; */
+  background-color: #44f;
+  color: #edeeef;
+
+}
+footer .logo {
+  float: right;
+  margin-top: 80px;
+  margin-right: 50px;
+}
+footer ul li a {
+  color: #fff;
+}
+footer ul li a:hover {
+  color: white;
+}
+hr {
+  border: 1px solid black;
+}
+
+/* ============font style =================== */
+/* p {
+	font-family: 'Roboto', sans-serif;
+
+	font-size: 20px;
+} */
+h1,h2,h3,h4 {
+	font-family: 'Fondamento', cursive;
+}
+
+
+/* ========================= Contact Us =============================== */
+ .line {
+  color: rgb(204, 42, 42);
+}
+.cover {
+  margin-left: 25%;
+}
+
+ .addr {
+   font-size: 1.5rem;
+   font-weight: 200;
+ }
+ .cover img {
+  box-shadow: 0 0 30px 0 lightgray;
+ }
+
+ .info .btn {
+   border-radius: 3rem;
+   padding:2rem 3rem 2rem 3rem;
+   background-color: cornsilk ;
+   color: blue;
+ }
